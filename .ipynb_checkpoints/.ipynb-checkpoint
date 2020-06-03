@@ -10,7 +10,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 4,
+   "execution_count": 2,
    "metadata": {},
    "outputs": [
     {
@@ -114,7 +114,7 @@
        "4                                       Fury   1.44  "
       ]
      },
-     "execution_count": 4,
+     "execution_count": 2,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -147,7 +147,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 5,
+   "execution_count": 3,
    "metadata": {
     "scrolled": true
    },
@@ -190,7 +190,7 @@
        "0            576"
       ]
      },
-     "execution_count": 5,
+     "execution_count": 3,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -226,7 +226,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 16,
+   "execution_count": 4,
    "metadata": {
     "scrolled": true
    },
@@ -275,7 +275,7 @@
        "0                     183         $3.05                  780     $2,379.77"
       ]
      },
-     "execution_count": 16,
+     "execution_count": 4,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -290,7 +290,6 @@
     "                              \"Average Price\": avgPrice,\n",
     "                              \"Number of Purchases\": numPurch,\n",
     "                              \"Total Revenue\": totalRev})\n",
-    "\n",
     "summary_tablePA[\"Average Price\"] = summary_tablePA[\"Average Price\"].map(\"${0:,.2f}\".format)\n",
     "summary_tablePA[\"Total Revenue\"] = summary_tablePA[\"Total Revenue\"].map(\"${0:,.2f}\".format)\n",
     "\n",
@@ -321,7 +320,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 8,
+   "execution_count": 5,
    "metadata": {},
    "outputs": [
     {
@@ -382,7 +381,7 @@
        "Other / Non-Disclosed           11                 1.91%"
       ]
      },
-     "execution_count": 8,
+     "execution_count": 5,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -432,7 +431,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 9,
+   "execution_count": 8,
    "metadata": {},
    "outputs": [
     {
@@ -509,7 +508,7 @@
        "Other / Non-Disclosed               $50.19                         $4.56  "
       ]
      },
-     "execution_count": 9,
+     "execution_count": 8,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -663,7 +662,7 @@
    ],
    "source": [
     "##Referenced \"BinningTed\" exercise to complete this portion\n",
-    "binsAge = [0, 9.9, 14.9, 19.9, 24.9, 29.9, 34.9, 39.9, 99999]\n",
+    "binsAge = [0, 9, 14, 19, 24, 29, 34, 39, 99]\n",
     "groupLabelsAge = [\"<10\", \"10-14\", \"15-19\", \"20-24\", \"25-29\", \"30-34\", \"35-39\", \"40+\"]\n",
     "pd.cut(purchData_df[\"Age\"], binsAge, labels=groupLabelsAge).head()\n",
     "purchData_df[\"Age Group\"] = pd.cut(purchData_df[\"Age\"],binsAge, labels=groupLabelsAge)\n",
@@ -836,7 +835,7 @@
    ],
    "source": [
     "#For Reference\n",
-    "#binsAge = [0, 9.9, 14.9, 19.9, 24.9, 29.9, 34.9, 39.9, 99999]\n",
+    "#binsAge = [0, 9, 14, 19, 24, 29, 34, 39, 99]\n",
     "#groupLabelsAge = [\"<10\", \"10-14\", \"15-19\", \"20-24\", \"25-29\", \"30-34\", \"35-39\", \"40+\"]\n",
     "#pd.cut(purchData_df[\"Age\"], binsAge, labels=groupLabelsAge).head()\n",
     "#purchData_df[\"Age Group\"] = pd.cut(purchData_df[\"Age\"],binsAge, labels=groupLabelsAge)\n",
